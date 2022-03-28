@@ -1,0 +1,26 @@
+
+      <section class="containerAdicionar">
+        <h2 id="titulo-form">{{ text }}</h2>
+        <ul id="mensagens-erro"></ul>
+        <form id="form-adiciona">
+          <div class="">
+            <label for="nome">Conta:</label>
+            <input id="nome" name="nome" type="text" placeholder="digite o nome da conta" class="campo">
+          </div>
+          <div class="grupo">
+            <label for="peso">Valor:</label>
+            <input id="peso" name="peso" type="text" placeholder="digite o valor da conta" class="campo campo-medio">
+          </div>
+          <div class="grupo">
+            <label for="altura">Data de Vencimento:</label>
+            <input id="altura" name="altura" type="text" placeholder="digite a data de vencimento"
+              class="campo campo-medio">
+          </div>
+          <div class="grupo">
+            <label for="gordura">Status:</label>
+            <input id="gordura" type="text" placeholder="digite o status da conta" class="campo campo-medio">
+          </div>
+
+          <button id="adicionar-paciente" class="botao_bto-principal" [disabled]="!permiteNewsLetter" type="button" (click)="onSubmit()">Adicionar</button>
+        </form>
+      </section>
