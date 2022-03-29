@@ -1,130 +1,61 @@
+<section class="containerAdicionar">
+  <h2 id="titulo-form">{{ text }}</h2>
+  <ul id="mensagens-erro"></ul>
 
-      <section class="containerTabela" id="tabela">
-        <table id="id_da_tabela" class="table table-striped table-hover display">
-          <!-- <table datatable [dtOptions]="dtOptions" class="row-border hover"></table> -->
-          <thead>
-            <tr>
-              <th>Conta</th>
-              <th>Valor</th>
-              <th>Data de vencimento</th>
-              <th>Status</th>
-              <th></th>
-              <th></th>
-            </tr>
-          </thead>
-          <tbody>
-            <!-- <tr *ngFor="let item of lista">
-              <td>{{ item.conta }}</td>
-              <td>{{ item.valor }}</td>
-              <td>{{ item.dataOperacao | date: 'dd/MM/yyyy'}}</td>
-              <td>{{ item.status }}</td>
-            </tr> -->
+  <form form  [formGroup]="checkoutForm" (ngSubmit)="onSubmit()" id="formulario">
+    <div class="">
+      <label for="nome">Conta:</label>
+      <input id="nome" name="nome" type="text" placeholder="digite o nome da conta" class="campo"
+      formControlName="conta">
+    </div>
 
+    <div class="grupo">
+      <label for="peso">Valor:</label>
+      <input id="peso" name="peso" type="text" placeholder="digite o valor da conta"
+      class="campo campo-medio" formControlName="valor">
+    </div>
 
-            <tr class="positivo">
-              <td>Luz</td>
-              <td>-113,24</td>
-              <td>29/12/2021</td>
-              <td>Pago</td>
-              <td><a href="../html/visaoGeral.html">Deletar</a></td>
-              <td><a href="../html/visaoGeral.html">Adicionar</a></td>
-            </tr>
-            <tr class="positivo">
-              <td>Água</td>
-              <td>254,84</td>
-              <td>31/12/2021</td>
-              <td>Pago</td>
-              <td><a href="../html/visaoGeral.html">Deletar</a></td>
-              <td><a href="../html/visaoGeral.html">Adicionar</a></td>
-            </tr>
-            <tr class="negativo">
-              <td>Alimentação</td>
-              <td>-700,00</td>
-              <td>30/12/2021</td>
-              <td>Pago</td>
-              <td><a href="../html/visaoGeral.html">Deletar</a></td>
-              <td><a href="../html/visaoGeral.html">Adicionar</a></td>
-            </tr>
-            <tr class="negativo">
-              <td>Gás</td>
-              <td>-130,00</td>
-              <td>30/12/2021</td>
-              <td>Pago</td>
-              <td><a href="../html/visaoGeral.html">Deletar</a></td>
-              <td><a href="../html/visaoGeral.html">Adicionar</a></td>
-            </tr>
-            <tr class="positivo">
-              <td>Celular</td>
-              <td>200,00</td>
-              <td>30/12/2021</td>
-              <td>Pago</td>
-              <td><a href="../html/visaoGeral.html">Deletar</a></td>
-              <td><a href="../html/visaoGeral.html">Adicionar</a></td>
-            </tr>
-            <tr class="positivo">
-              <td>Diversão</td>
-              <td>500,00</td>
-              <td>30/12/2021</td>
-              <td>Pago</td>
-              <td><a href="../html/visaoGeral.html">Deletar</a></td>
-              <td><a href="../html/visaoGeral.html">Adicionar</a></td>
-            </tr>
-            <tr class="positivo">
-              <td>IPTU</td>
-              <td>900,00</td>
-              <td>30/12/2021</td>
-              <td>Pago</td>
-              <td><a href="../html/visaoGeral.html">Deletar</a></td>
-              <td><a href="../html/visaoGeral.html">Adicionar</a></td>
-            </tr>
-            <tr class="positivo">
-              <td>IPVA</td>
-              <td>700,00</td>
-              <td>29/12/2021</td>
-              <td>Pago</td>
-              <td><a href="../html/visaoGeral.html">Deletar</a></td>
-              <td><a href="../html/visaoGeral.html">Adicionar</a></td>
-            </tr>
-            <tr class="positivo">
-              <td>Despesas variáveis</td>
-              <td>400,00</td>
-              <td>30/12/2021</td>
-              <td>Pago</td>
-              <td><a href="../html/visaoGeral.html">Deletar</a></td>
-              <td><a href="../html/visaoGeral.html">Adicionar</a></td>
-            </tr>
-            <tr class="negativo">
-              <td>Remédio</td>
-              <td>-100,00</td>
-              <td>30/12/2021</td>
-              <td>Pago</td>
-              <td><a href="../html/visaoGeral.html">Deletar</a></td>
-              <td><a href="../html/visaoGeral.html">Adicionar</a></td>
-            </tr>
-            <tr class="positivo">
-              <td>Viagem</td>
-              <td>900,00</td>
-              <td>30/12/2021</td>
-              <td>Pago</td>
-              <td><a href="../html/visaoGeral.html">Deletar</a></td>
-              <td><a href="../html/visaoGeral.html">Adicionar</a></td>
-            </tr>
-            <tr class="positivo">
-              <td>Estudos</td>
-              <td>900,00</td>
-              <td>30/12/2021</td>
-              <td>Pago</td>
-              <td><a href="../html/visaoGeral.html">Deletar</a></td>
-              <td><a href="../html/visaoGeral.html">Adicionar</a></td>
-            </tr>
-            <tr class="positivo">
-              <td>Transporte</td>
-              <td>900,00</td>
-              <td>30/12/2021</td>
-              <td>Pago</td>
-              <td><a href="../html/visaoGeral.html">Deletar</a></td>
-              <td><a href="../html/visaoGeral.html">Adicionar</a></td>
-            </tr>
-          </tbody>
-        </table>
-      </section>
+    <div class="grupo">
+      <label for="altura">Data de Vencimento:</label>
+      <input id="altura" name="altura" type="text" placeholder="digite a data de vencimento"
+        class="campo campo-medio" formControlName="dataOperacao">
+    </div>
+
+    <div class="grupo">
+      <label for="gordura">Status:</label>
+      <input id="gordura" type="text" placeholder="digite o status da conta"
+      class="campo campo-medio" formControlName="status">
+    </div>
+
+    <!-- <button id="adicionar-paciente" class="botao_bto-principal"  type="submit">Adicionar</button> -->
+    <button id="adicionar-paciente" class="botao_bto-principal" [disabled]="!permiteNewsLetter"
+    type="button" (click)="onSubmit()">Adicionar</button>
+
+  </form>
+</section>
+
+<!-- <section class="containerTabela" id="tabela">
+        <table id="id_da_tabela" class="table table-striped table-hover display"> -->
+
+<table datatable [dtOptions]="dtOptions" class="row-border hover table table-hover">
+  <thead>
+    <tr>
+      <th>Conta</th>
+      <th>Valor</th>
+      <th>Data de vencimento</th>
+      <th>Status</th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let item of lista">
+      <td>{{ item.conta }}</td>
+      <td>{{ item.valor }}</td>
+      <td>{{ item.dataOperacao | date: 'dd/MM/yyyy'}}</td>
+      <td>{{ item.status }}</td>
+    </tr>
+  </tbody>
+</table>
+<!-- </table> -->
+<!-- </section>  -->

@@ -8,13 +8,13 @@ import {registerLocaleData} from '@angular/common';
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
 import { HomeComponent } from './home/home.component';
-import { AdicionarComponent } from './home/adicionar/adicionar.component';
+// import { AdicionarComponent } from './home/adicionar/adicionar.component';
 import { TabelaComponent } from './home/tabela/tabela.component';
 import { GraficoComponent } from './home/grafico/grafico.component';
 import { FootterComponent } from './footter/footter.component';
 import { DataTablesModule } from 'angular-datatables';
 import localePt from '@angular/common/locales/pt';
-import { ReactiveFormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 
 registerLocaleData(localePt, 'pt-BR');
@@ -25,7 +25,7 @@ registerLocaleData(localePt, 'pt-BR');
     AppComponent,
     HeaderComponent,
     HomeComponent,
-    AdicionarComponent,
+    // AdicionarComponent,
     TabelaComponent,
     GraficoComponent,
     FootterComponent,
@@ -34,7 +34,8 @@ registerLocaleData(localePt, 'pt-BR');
     ReactiveFormsModule,
     AppRoutingModule,
     BrowserModule,
-    DataTablesModule
+    DataTablesModule,
+    FormsModule
   ],
   providers: [
     {
